@@ -1,7 +1,9 @@
 module.exports = {
   extends: [
+    "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
   ],
@@ -13,7 +15,6 @@ module.exports = {
     "import",
   ],
   rules: {
-    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/ban-ts-comment": [
