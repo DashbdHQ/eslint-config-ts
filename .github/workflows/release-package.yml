@@ -27,7 +27,7 @@ jobs:
           scope: "@dashbd"
       - run: |
           npm ci
-          npm publish
+          npm publish --access public
         if: ${{ steps.release.outputs.released == 'true' }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
