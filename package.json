@@ -17,7 +17,7 @@
     "deploy:minor": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"main\" ]]; then (npm version minor && git push); else echo \"not on main\"; fi;",
     "deploy:major": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"main\" ]]; then (npm version major && git push); else echo \"not on main\"; fi;"
   },
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "eslint-config-prettier": "^8.8.0",
