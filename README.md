@@ -1,11 +1,11 @@
-# @dashbd/eslint-typescript
+# @dashbd/eslint-config-ts
 
 ESLint configuration for Typescript files.
 
 ## Installation
 
 ```bash
-npm install --save-dev @dashbd/eslint-typescript
+npm install --save-dev @dashbd/eslint-config-ts eslint prettier
 ```
 
 ## Usage
@@ -14,6 +14,6 @@ npm install --save-dev @dashbd/eslint-typescript
     
 ```js
 module.exports = {
-    extends: ['@dashbd/eslint-typescript']
+    extends: ['@dashbd/eslint-config-ts']
 };
 ```
