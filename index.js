@@ -45,7 +45,7 @@ module.exports = {
           // UI components:
           ["^(ui)(/.*|$)"],
           // App internal components:
-          ["^@(/.*|$)"],
+          ["^@[^/].*|^@(/.*|$)"],
           // Side effect imports.
           ["^\\u0000"],
           // Parent imports. Put `..` last.
