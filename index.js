@@ -2,6 +2,7 @@
 
 import { defineConfig } from "eslint/config";
 import prettier from "eslint-config-prettier/flat";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { importX } from "eslint-plugin-import-x";
 import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -22,6 +23,13 @@ export default defineConfig([
     plugins: {
       "unused-imports": unusedImports,
       "simple-import-sort": simpleImportSort,
+    },
+    settings: {
+      "import-x/resolver-next": [
+        createTypeScriptImportResolver({
+          alwaysTryTypes: true,
+        }),
+      ],
     },
     rules: {
       "unused-imports/no-unused-imports": "error",
