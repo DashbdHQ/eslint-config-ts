@@ -18,6 +18,7 @@ export default defineConfig([
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat["jsx-runtime"],
   reactHooks.configs.flat.recommended,
+  // @ts-ignore - this is a valid config
   importX.flatConfigs.recommended,
   {
     plugins: {
@@ -85,6 +86,7 @@ export default defineConfig([
         },
       ],
       "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ]);
