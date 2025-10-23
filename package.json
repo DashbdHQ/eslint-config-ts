@@ -2,6 +2,7 @@
   "name": "@dashbd/eslint-config-ts",
   "version": "3.0.2",
   "main": "index.js",
+  "types": "index.d.ts",
   "license": "MIT",
   "homepage": "https://github.com/DashbdHQ/eslint-config-ts#readme",
   "type": "module",
@@ -37,6 +38,9 @@
     "eslint": ">= 9",
     "prettier": ">= 3",
     "typescript": ">= 5"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.0.0"
   },
   "publishConfig": {
     "access": "public"
