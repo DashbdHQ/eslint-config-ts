@@ -1,9 +1,8 @@
-/* eslint-disable import/no-unresolved */
 // @ts-check
 
 import { defineConfig } from "eslint/config";
 import prettier from "eslint-config-prettier/flat";
-import importPlugin from "eslint-plugin-import";
+import { importX } from "eslint-plugin-import-x";
 import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
@@ -15,28 +14,16 @@ import js from "@eslint/js";
 export default defineConfig([
   js.configs.recommended,
   prettier,
-  tseslint.configs.recommended,
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat["jsx-runtime"],
   reactHooks.configs.flat.recommended,
-  importPlugin.flatConfigs.recommended,
+  importX.flatConfigs.recommended,
   {
     plugins: {
       "unused-imports": unusedImports,
       "simple-import-sort": simpleImportSort,
     },
     rules: {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-empty-function": "off",
-      "@typescript-eslint/no-non-null-assertion": "off",
-      "@typescript-eslint/ban-types": "off",
-      "@typescript-eslint/ban-ts-comment": [
-        "error",
-        {
-          "ts-ignore": "allow-with-description",
-        },
-      ],
-      "@typescript-eslint/explicit-module-boundary-types": "off",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": [
         "warn",
@@ -69,10 +56,27 @@ export default defineConfig([
         },
       ],
       "simple-import-sort/exports": "warn",
-      "import/first": "error",
-      "import/newline-after-import": "error",
-      "import/no-duplicates": "error",
-      "import/no-anonymous-default-export": "off",
+      "import-x/first": "error",
+      "import-x/newline-after-import": "error",
+      "import-x/no-duplicates": "error",
+      "import-x/no-anonymous-default-export": "off",
+    },
+  },
+  {
+    files: ["**/*.{ts,tsx}"],
+    extends: [tseslint.configs.recommended],
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        {
+          "ts-ignore": "allow-with-description",
+        },
+      ],
+      "@typescript-eslint/explicit-module-boundary-types": "off",
     },
   },
 ]);

@@ -15,9 +15,9 @@ npm install --save-dev @dashbd/eslint-config-ts eslint prettier
 ```js
 import dashbdConfig from "@dashbd/eslint-config-ts";
 
-export default defineConfig([
+export default [
     ...
     dashbdConfig,
     ...
-]);
+];
 ```
