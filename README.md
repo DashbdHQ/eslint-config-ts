@@ -1,6 +1,6 @@
 # @dashbd/eslint-config-ts
 
-ESLint configuration for Typescript files.
+Opinionated ESLint configuration for Typescript/React JSX files.
 
 ## Installation
 
@@ -8,12 +8,16 @@ ESLint configuration for Typescript files.
 npm install --save-dev @dashbd/eslint-config-ts eslint prettier
 ```
 
-## Usage
+## Usage (Flat Config)
 
-`.eslintrc.js` example:
+`eslint.config.js` example:
     
 ```js
-module.exports = {
-    extends: ['@dashbd/eslint-config-ts']
-};
+import dashbdConfig from "@dashbd/eslint-config-ts";
+
+export default defineConfig([
+    ...
+    dashbdConfig,
+    ...
+]);
 ```
