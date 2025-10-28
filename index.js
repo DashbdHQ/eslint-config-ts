@@ -69,6 +69,7 @@ export default defineConfig([
       "import-x/newline-after-import": "error",
       "import-x/no-duplicates": "error",
       "import-x/no-anonymous-default-export": "off",
+      "react-hooks/refs": "off",
     },
   },
   {
