@@ -70,6 +70,7 @@ export default defineConfig([
       "import-x/no-duplicates": "error",
       "import-x/no-anonymous-default-export": "off",
       "react-hooks/refs": "off",
+      "react-hooks/set-state-in-effect": "off",
     },
   },
   {
